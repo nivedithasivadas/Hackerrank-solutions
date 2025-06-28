@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class MagicDoorCode {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+    // Read the four-digit number
+        int number = scanner.nextInt();
+
+    // Work with absolute value to ignore signs
+        number = Math.abs(number);
+
+    // Extract last digit
+        int lastDigit = number % 10;
+
+    // Extract first digit
+        int firstDigit = number / 1000;
+
+    // Sum first and last digits
+        int result = firstDigit + lastDigit;
+
+    // Output the result
+        System.out.println(result);
+    }
+}
