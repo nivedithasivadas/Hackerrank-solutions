@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class TeamSplitter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int friends = scanner.nextInt();   
+        int teams = scanner.nextInt();
+        int teamSize = friends / teams; 
+        int leftOut = friends % teams;
+        System.out.println("The number of friends in each team is " + teamSize + " and left out is " + leftOut);
+
+    }
+}
