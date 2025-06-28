@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class PeterRabbitPogo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+    // Read input coordinates
+        int x = scanner.nextInt();     
+        int y = scanner.nextInt();
+        
+    // Peter's house is at (3, 4)
+        int startX = 3;      
+        int startY = 4;
+    // Calculate Euclidean distance
+        double distance = Math.sqrt(Math.pow(x - startX, 2) + Math.pow(y - startY, 2));  
+     
+    // Round the distance to get number of hops
+        int hops = (int) Math.round(distance);  
+        
+        System.out.println(hops);
+    }
+}
