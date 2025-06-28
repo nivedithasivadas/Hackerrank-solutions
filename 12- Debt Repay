@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class BusinessLoan {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+    // Input: principal (P), rate (R), and time (T)
+        float principal = scanner.nextFloat();
+        float rate = scanner.nextFloat();
+        float time = scanner.nextFloat();
+
+    // Calculate simple interest
+        float interest = (principal * rate * time) / 100;
+
+    // Calculate total amount before discount
+        float amount = principal + interest;
+
+    // Calculate 2% discount on the interest
+        float discount = (2 * interest) / 100;
+
+    // Calculate final settlement amount
+        float finalAmount = amount - discount;
+
+    // Output all values with 2 decimal places
+        System.out.printf("%.2f\n", interest);
+        System.out.printf("%.2f\n", amount);
+        System.out.printf("%.2f\n", discount);
+        System.out.printf("%.2f\n", finalAmount);
+    }
+}
