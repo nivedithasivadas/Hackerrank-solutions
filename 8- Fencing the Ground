@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class WesterosGround {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+     // Read length and breadth
+        int length = scanner.nextInt();
+        int breadth = scanner.nextInt();
+
+     // Calculate perimeter (rope length)
+        int perimeter = 2 * (length + breadth);
+
+     // Calculate area (carpet area)
+        int area = length * breadth;
+
+     // Print results
+        System.out.println("The required length is " + perimeter + " m");
+        System.out.println("The required area of carpet is " + area + " sqm");
+    }
+}
