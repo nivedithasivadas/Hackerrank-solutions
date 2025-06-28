@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class HeraldProfit {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+     // Read inputs
+        int a = scanner.nextInt(); // Number of copies sold
+        int b = scanner.nextInt(); // Selling price per copy
+        int c = scanner.nextInt(); // Cost per copy
+
+    // Fixed cost
+        int fixedCost = 100;
+
+    // Calculate profit
+        int profit = (a * (b - c)) - fixedCost;
+
+    // Print result
+        System.out.println(profit);
+    }
+}
