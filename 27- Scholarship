@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class ScholarshipEligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+        int year = sc.nextInt();
+        int income = sc.nextInt();
+        int arrears = sc.nextInt();
+        float marks = sc.nextFloat();
+        float attendance = sc.nextFloat();
+        if (age < 18 || age >= 21 || year < 2021) {
+            System.out.println("Not Eligible");
+            return;
+        }
+        boolean basicEligibility = (arrears <= 2 && income <= 200000 && marks >= 60 && attendance >= 80);
+
+        if (basicEligibility) {
+            System.out.println("Eligible");
+            return;
+        }
+        if (arrears > 2 && marks >= 80 && attendance >= 90 && income <= 200000) {
+            System.out.println("Eligible");
+            return;
+        }
+        if (income > 200000 && income < 250000 &&
+            arrears <= 2 && marks >= 60 && attendance >= 80) {
+            System.out.println("Partially Eligible");
+            return;
+        }
+        System.out.println("Not Eligible");
+    }
+}
