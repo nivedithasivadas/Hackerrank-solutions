@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class MangoTreeChecker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int rows = sc.nextInt();
+        int cols = sc.nextInt();
+        int treeNum = sc.nextInt();
+        boolean isFirstRow = (treeNum >= 1 && treeNum <= cols);
+        boolean isFirstColumn = (treeNum % cols == 1);
+        boolean isLastColumn = (treeNum % cols == 0);
+        if (isFirstRow || isFirstColumn || isLastColumn) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
