@@ -1,0 +1,23 @@
+import java.util.*;
+public class TreasureBoxGame {
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int[] boxes = {a, b, c};
+        Arrays.sort(boxes);
+        int secondLargest = boxes[1];
+        int code = gcd(gcd(a, b), c);
+        System.out.println("The treasure is in the box which has the number " + secondLargest);
+        System.out.println("The code to open the box is " + code);
+    }
+}
